@@ -12,26 +12,14 @@ skip_untracked = false
 pre_bump_hooks = []
 post_bump_hooks = []
 pre_package_bump_hooks = []
-
-post_package_bump_hooks = [
-    "~/features-scripts/update-version-file.sh {{package}} {{version}} devcontainer-feature.json"
-]
+post_package_bump_hooks = []
 
 [git_hooks]
 
 [commit_types]
 
-[bump_profiles]
-
-[monorepo.packages.cocogitto]
-path = "src/cocogitto"
-
 [changelog]
-template = "monorepo_remote"
-package_template = "package_remote"
-remote = "github.com"
-repository = "features"
-owner = "zaharsk"
-authors = [
-    { signature = "Zakhar Skorokhodov", username = "zaharsk" },
-]
+path = "CHANGELOG.md"
+authors = []
+
+[bump_profiles]
