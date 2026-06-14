@@ -13,23 +13,23 @@ jobs:
         with:
           fetch-depth: 0
 
-      # - name: Conventional commit check
-      #   uses: cocogitto/cocogitto-action@v4
-      #   with:
-      #     command: check
+      - name: Conventional commit check
+        uses: zaharsk/cocogitto-action@v0.1.2
+        with:
+          command: check
 
-      - name: Install Cocogitto
-        run: |
-          curl -fsSL https://github.com/cocogitto/cocogitto/releases/download/7.0.0/cocogitto-7.0.0-x86_64-unknown-linux-musl.tar.gz \
-            | tar -xz
-          sudo mv x86_64-unknown-linux-musl/cog /usr/local/bin/
+      # - name: Install Cocogitto
+      #   run: |
+      #     curl -fsSL https://github.com/cocogitto/cocogitto/releases/download/7.0.0/cocogitto-7.0.0-x86_64-unknown-linux-musl.tar.gz \
+      #       | tar -xz
+      #     sudo mv x86_64-unknown-linux-musl/cog /usr/local/bin/
 
-      - name: Check commits
-        run: |
-          cog -vvv check
+      # - name: Check commits
+      #   run: |
+      #     cog -vvv check
 
-      - name: Debug git history
-        run: |
-          cog --version
-          git log --oneline --decorate --graph --all
-          cog -vvv check
+      # - name: Debug git history
+      #   run: |
+      #     cog --version
+      #     git log --oneline --decorate --graph --all
+      #     cog -vvv check

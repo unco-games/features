@@ -4,7 +4,9 @@
   "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
 
   "features": {
-    "./features/cocogitto": {}
+    "./features/cocogitto": {
+      "version": "6.5.0"
+    }
   },
 
   "initializeCommand": ".devcontainer/initialize-command.sh",
